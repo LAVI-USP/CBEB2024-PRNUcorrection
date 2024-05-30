@@ -1,7 +1,7 @@
 %% This function inserts noise in digital mammography images
 % 
 %  Inputs:    y - Noisy-free image
-%             Rho  - PRNU (strucutal noise) map
+%             Rho  - PRNU (structural noise) map
 %             Lambda - Gain of the quantum noise
 %             Sigma_E - Standard deviation of the electronic noise
 %
