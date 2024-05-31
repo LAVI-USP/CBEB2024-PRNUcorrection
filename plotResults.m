@@ -12,8 +12,8 @@ plot(Medias1, variancias1, 'o', 'Color', [0.9 0.7 0.12]), axis([0 5600 0 400]), 
 plot((0:5500), f1(0:5500), '-', 'Color', [0.9 0.7 0.12]), hold on
 p_aux2=plot(5000:100:6000,5000:100:6000,'-o','Color',[0.9 0.7 0.12]); axis([0 5600 0 400]),grid on, hold on
 
-first_line = ['\sigma^2 = ' num2str(round(P1(1),6)) '\mu^2 + ' num2str(round(P1(2),2)) '\mu + ' num2str(round(P1(3),2))];
-second_line = ['\sigma^2 = ' num2str(round(P2(1),6)) '\mu^2 + ' num2str(round(P2(2),2)) '\mu + ' num2str(round(P2(3),2))];
+first_line = ['\sigma^2 = ' num2str(round(P1(1),6)) '\mu^2 + ' num2str(round(P1(2),2)) '\mu + ' num2str(round(P1(3),2)) ' (Before PRNU correction)'];
+second_line = ['\sigma^2 = ' num2str(round(P2(1),6)) '\mu^2 + ' num2str(round(P2(2),2)) '\mu + ' num2str(round(P2(3),2)) ' (After PRNU correction)'];
 [l,h_legend] = legend([p_aux2 p_aux1],{first_line,second_line},'Location','northwest','FontSize',10);
 xlabel('Mean Pixel Value (\mu)')
 ylabel('Variance (\sigma^{2})')
