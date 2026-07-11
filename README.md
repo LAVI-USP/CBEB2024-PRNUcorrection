@@ -1,11 +1,90 @@
-# PRNU correction
+# Photo Response Non-Uniformity (PRNU) Correction for Digital Mammography Systems
 
-It contains the codes for the paper "Photo response non-uniformity correction for digital mammography systems", submitted to the CBEB 2024 conference. 
+This repository contains the MATLAB implementation of the structural noise correction framework proposed in the paper:
 
-Disclaimer: For education purposes only.
+> **Photo Response Non-Uniformity Correction for Digital Mammography Systems**  
+> Renann F. Brandão, Arthur C. Costa, Lucas E. Soares, Alessandro F. Frangi, Marcelo A. Vieira, and Wellington P. Santos  
+> Brazilian Congress on Biomedical Engineering (CBEB 2024)
 
-## Abstract:
-Denoising is a crucial tool for improving image quality and reducing radiation exposure in medical imaging. The effectiveness of denoising techniques relies on accurate noise modeling and understanding equipment characteristics. In previous studies, our research group developed a denoising pipeline that considers the Poisson-Gaussian noise model, including both signal and spatial-dependent quantum noise and electronic noise. However, this work did not address another noise source known as Photo Response Non-Uniformity (PRNU), or structural noise. In this work, we propose a correction for PRNU in Full-Field Digital Mammography (FFDM) images and analyze the impact of this correction on the denoising pipeline for mammography images. Our results indicate that correcting for structural noise enhances the effectiveness of our approach in removing noise from mammography images in terms of signal loss, especially in regions characterized by higher concentrations of high-gray-level pixels.
+The proposed method estimates the Photo Response Non-Uniformity (PRNU) map from flat-field mammography images and applies a correction step prior to denoising. The objective is to reduce the influence of structural noise, improving the balance between noise suppression and signal preservation in indirect-conversion digital mammography systems.
 
-## Acknowledgments:
-This work was supported by the São Paulo Research Foundation (FAPESP) grant #2021/12673-6 and by the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) - Finance Code 001.
+---
+
+## Repository contents
+
+The repository includes MATLAB scripts for:
+
+- Estimation of the PRNU map from multiple flat-field images;
+- Structural noise correction;
+- Estimation of the quadratic noise model parameters;
+- Quantitative evaluation of the denoising performance;
+- Reproduction of the figures and results presented in the publication.
+
+---
+
+## Requirements
+
+The code was developed and tested using:
+
+- MATLAB R2025b
+
+Required toolboxes:
+
+- Image Processing Toolbox
+- Statistics and Machine Learning Toolbox
+
+---
+
+## Method overview
+
+The implemented framework follows the workflow below:
+
+1. Acquire multiple flat-field mammography images;
+2. Estimate the detector PRNU map;
+3. Apply the PRNU correction to the mammography image;
+4. Estimate the noise model parameters;
+5. Perform image denoising;
+6. Evaluate restoration quality using quantitative metrics.
+
+---
+
+## Citation
+
+If you use this code in your research, please cite the following publication:
+
+> Brandão, R. F., Costa, A. C., Soares, L. E., Frangi, A. F., Vieira, M. A., & Santos, W. P.  
+> **Photo Response Non-Uniformity Correction for Digital Mammography Systems.**  
+> Brazilian Congress on Biomedical Engineering (CBEB), 2024.
+
+BibTeX:
+
+```bibtex
+@inproceedings{brandao2024photo,
+  title={Photo Response Non-Uniformity Correction for Digital Mammography Systems},
+  author={Brand{\~a}o, Renann F and Borges, Lucas R and Caron, Renato F and Maidment, Andrew DA and Vieira, Marcelo AC},
+  booktitle={Brazilian Congress on Biomedical Engineering},
+  pages={253--263},
+  year={2024},
+  organization={Springer}
+}
+```
+
+---
+
+## License
+
+This repository is intended for academic and research purposes.
+
+---
+
+## Contact
+
+**Renann F. Brandão**
+
+Ph.D. Candidate — University of São Paulo (USP)
+
+LAVI (Laboratory for Advanced Vision and Imaging)
+
+📧 renann.brandao@usp.br
+
+🌐 https://github.com/LAVI-USP
